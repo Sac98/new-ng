@@ -27,4 +27,7 @@ export class ReactiveFormsComponent {
   onSubmit() {
     console.log(this.reactiveForm.value);
   }
+  onReset(){
+    this.reactiveForm.reset();
+  }
 }
