@@ -1,0 +1,50 @@
+<div class="container">
+    <form #userForm="ngForm" (ngSubmit)="submit(userForm)">
+        <h2 class="text-center">User information</h2>
+        <div class="text-center b2">
+            <!-- <h3>User Values : {{userForm.value | json}}</h3>
+            <h3>valid : {{userForm.valid | json}}</h3>
+            <h3>invalid : {{userForm.invalid | json}}</h3>
+            <h3>touched : {{userForm.touched | json}}</h3>
+            <h3>untouched : {{userForm.untouched | json}}</h3>
+            <h3>submitted : {{userForm.submitted | json}}</h3> -->
+        </div>
+        <h3>You've Entered {{userObject.firstName}}</h3>
+        <div class="mb-2 ">
+            <label>First Name</label>
+            <input type="text" class="form-control" placeholder="Enter First Name" name="firstname"
+                [(ngModel)]="userObject.firstName">
+        </div>
+
+        <div class="mb-2 ">
+            <h2>You've Entered {{userObject.lastName}} </h2>
+            <label>Last Name</label>
+            <input type="text" class="form-control" placeholder="Enter Last Name" name="lastname"
+                [(ngModel)]="userObject.lastName">
+        </div>
+
+        <div class="mb-2 ">
+            <h2>You've Entered {{userObject.email}} </h2>
+            <label>Email</label>
+            <input type="text" class="form-control" placeholder="Enter Email" name="email"
+                [(ngModel)]="userObject.email">
+        </div>
+
+        <div class="mb-2 ">
+            <h2>You've Entered {{userObject.password}} </h2>
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="Enter Password" name="password"
+                [(ngModel)]="userObject.password">
+        </div>
+
+        <div class="mb-2 ">
+            <h2>You've Checked {{userObject.check}} </h2>
+            <label>Check me out</label>
+            <input type="checkbox" class="form-check-input" placeholder="Check me" name="check"
+                [(ngModel)]="userObject.check">
+        </div>
+        <button class="btn btn-success">Submit</button>
+        <button class="btn btn-warning" (click)="setValues(userForm)">Set Values</button>
+        <button class="btn btn-warning" (click)="resetValues(userForm)">ReSet </button>
+    </form>
+</div>
