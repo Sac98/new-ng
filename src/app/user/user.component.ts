@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, RouterOutlet, RouterLink } from '@angular/router';
+import { SharedDataService } from '../shared-data.service';
 
 @Component({
   selector: 'app-user',
@@ -9,7 +10,12 @@ import { Router, RouterOutlet, RouterLink } from '@angular/router';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  constructor(private router: Router) { }
+  dummyUserData: any;
+
+  constructor(private router: Router, private sharedDataService: SharedDataService) {
+    this.dummyUserData = this.sharedDataService.getUserData();
+  }
+
   validate() {
     // validation logic
 // this.router.navigateByUrl("/structral-directive")

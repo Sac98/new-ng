@@ -8,6 +8,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { ProfileComponent } from './profile/profile.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -19,6 +20,7 @@ export const routes: Routes = [
     { path: 'app-pipes', component: PipesComponent },
     { path: 'tdf', component: TemplateDrivenFormsComponent },
     { path: 'reactive', component: ReactiveFormsComponent },
+    { path: 'profile', component: ProfileComponent },
     { path: '**', component: PageNotFoundComponent }
 
 ];

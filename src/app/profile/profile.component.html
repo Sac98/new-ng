@@ -1,0 +1,13 @@
+<p>profile works!</p>
+
+<div class="m2">
+  <h2>User Data</h2>
+  <ul *ngFor="let user of apiData">
+    <li>
+      {{ user.id }} - {{ user.name }} <br />
+      {{ user.email }} <br />
+      {{ user.address | json }}
+    </li>
+  </ul>
+  F
+</div>
