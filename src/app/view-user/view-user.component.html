@@ -1,0 +1,11 @@
+<div class="container mt-4">
+  <h2>Viewing User Details</h2>
+
+  <div *ngIf="userData" class="card p-3 mb-3">
+    <p><strong>ID:</strong> {{ userData.id }}</p>
+    <p><strong>Name:</strong> {{ userData.name }}</p>
+    <p><strong>Email:</strong> {{ userData.email }}</p>
+    <p><strong>Phone:</strong> {{ userData.phone }}</p>
+
+  <button (click)="goBack()">Go Back</button>
+</div>

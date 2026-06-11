@@ -9,9 +9,14 @@ import { TemplateDrivenFormsComponent } from './template-driven-forms/template-d
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CRUDComponent } from './crud/crud.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { ViewUserComponent } from './view-user/view-user.component';
+import { DeleteUserComponent } from './delete-user/delete-user.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '', redirectTo: 'user', pathMatch: 'full' },
     { path: 'rxjs', component: RxjsBasicComponent },
     { path: 'user', component: UserComponent },
     { path: 'data-binding', component: DataBindingComponent },
@@ -21,6 +26,11 @@ export const routes: Routes = [
     { path: 'tdf', component: TemplateDrivenFormsComponent },
     { path: 'reactive', component: ReactiveFormsComponent },
     { path: 'profile', component: ProfileComponent },
+    { path: 'crud', component: CRUDComponent },
+    { path: 'add-user', component: AddUserComponent },
+    { path: 'view-user/:id', component: ViewUserComponent },
+    { path: 'update-user/:id', component: UpdateUserComponent },
+    { path: 'delete-user/:id', component: DeleteUserComponent },
     { path: '**', component: PageNotFoundComponent }
 
 ];
