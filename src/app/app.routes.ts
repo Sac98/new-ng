@@ -17,20 +17,20 @@ import { UpdateUserComponent } from './update-user/update-user.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'user', pathMatch: 'full' },
-    { path: 'rxjs', component: RxjsBasicComponent },
-    { path: 'user', component: UserComponent },
-    { path: 'data-binding', component: DataBindingComponent },
-    { path: 'structral-directive', component: StructralDirectivesComponent },
-    { path: 'app-lifecycle-hooks', component: LifecycleHooksComponent },
-    { path: 'app-pipes', component: PipesComponent },
-    { path: 'tdf', component: TemplateDrivenFormsComponent },
-    { path: 'reactive', component: ReactiveFormsComponent },
-    { path: 'profile', component: ProfileComponent },
-    { path: 'crud', component: CRUDComponent },
-    { path: 'add-user', component: AddUserComponent },
-    { path: 'view-user/:id', component: ViewUserComponent },
-    { path: 'update-user/:id', component: UpdateUserComponent },
-    { path: 'delete-user/:id', component: DeleteUserComponent },
-    { path: '**', component: PageNotFoundComponent }
+    { path: 'rxjs', component: RxjsBasicComponent, title: 'RxJS Basics' },
+    { path: 'user', component: UserComponent, title: 'User Management' },
+    { path: 'data-binding', component: DataBindingComponent, title: 'Data Binding' },
+    { path: 'structral-directive', component: StructralDirectivesComponent, title: 'Structural Directives' },
+    { path: 'app-lifecycle-hooks', component: LifecycleHooksComponent, title: 'Lifecycle Hooks' },
+    { path: 'app-pipes', component: PipesComponent, title: 'Pipes' },
+    { path: 'tdf', component: TemplateDrivenFormsComponent, title: 'Template-Driven Forms' },
+    { path: 'reactive', component: ReactiveFormsComponent, title: 'Reactive Forms' },
+    { path: 'profile', component: ProfileComponent, title: 'Profile' },
+    { path: 'crud', component: CRUDComponent, title: 'CRUD Operations' },
+    { path: 'add-user', component: AddUserComponent, title: 'Add User' },
+    { path: 'view-user/:id', component: ViewUserComponent, title: 'View User' },
+    { path: 'update-user/:id', component: UpdateUserComponent, title: 'Update User' },
+    { path: 'delete-user/:id', component: DeleteUserComponent, title: 'Delete User' },
+    { path: '**', component: PageNotFoundComponent, title: 'Page Not Found' }
 
 ];
