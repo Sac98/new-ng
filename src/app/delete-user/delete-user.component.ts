@@ -22,6 +22,7 @@ export class DeleteUserComponent {
     this.userID.uid = this.route.snapshot.params['id'];
     console.log('User ID to delete:', this.userID.uid);
     this.crudService.deleteDataById(this.userID.uid).subscribe(() => {
+      alert('User deleted successfully');
       console.log('User deleted successfully', this.userID.uid);
       this.router.navigate(['/crud']);
     });

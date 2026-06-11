@@ -24,7 +24,9 @@ export class AddUserComponent {
     // console.log(this.addUserForm.value);
     this.crudService.postData(this.addUserForm.value).subscribe((response) => {
       console.log('User added:', response);
+
       this.router.navigate(['/crud']);
+      alert('User added successfully');
     });
   }
 

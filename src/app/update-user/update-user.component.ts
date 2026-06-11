@@ -57,6 +57,7 @@ export class UpdateUserComponent implements OnInit {
       console.log('Updated User Data', updatedUser);
       this.crudService.putDataById(this.userID.uid, updatedUser).subscribe((response) => {
         console.log('User updated successfully', response);
+        alert('User data updated successfully');
         this.router.navigate(['/crud']);
       });
     }
